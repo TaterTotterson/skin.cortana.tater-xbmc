@@ -36,6 +36,8 @@
 
 - Discord Rich Presence support, just like modern consoles! Show off what you're playing to your friends at any time! (Uses [Xbox Discord Rich Presence](https://github.com/OfficialTeamUIX/Xbox-Discord-Rich-Presence))
 
+- Easily browse and control your media servers with Jellyfin, cortanaMPRIS, and more!
+
 - Paired with **Cortana Wireless**, you can easily connect a Raspberry Pi or similar SBC as a wireless network card for your Xbox and easily manage your Wi-Fi settings!
 
 - **Per-profile save games, auto-start scripts and social features!** Share your Xbox with friends and family? Everyone gets their own accounts and saves!
