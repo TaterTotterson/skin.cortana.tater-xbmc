@@ -114,28 +114,13 @@
 					</focusedlayout>
 					<content>
 						<item>
-							<label>Social</label>
-							<onclick>Dialog.Close(shutdownmenu)</onclick>
-							<onclick>ActivateWindow(9010)</onclick>
-						</item>
-						<item>
-							<label>Friends</label>
-							<onclick>RunScript(Q:\skin\Cortana\scripts\chat.py,Friends)</onclick>
+							<label>Cortana</label>
+							<onclick>RunScript(Q:\scripts\script.taterchat\default.py)</onclick>
 							<onclick>Dialog.Close(shutdownmenu)</onclick>
 						</item>
 						<item>
-							<label>Messages</label>
-							<onclick>RunScript(Q:\skin\Cortana\scripts\chat.py,Chat)</onclick>
-							<onclick>Dialog.Close(shutdownmenu)</onclick>
-						</item>
-						<item>
-							<label>Beacons & Activity</label>
-							<onclick>RunScript(Q:\skin\Cortana\scripts\chat.py,Activity)</onclick>
-							<onclick>Dialog.Close(shutdownmenu)</onclick>
-						</item>
-						<item>
-							<label>Notifications</label>
-							<onclick>RunScript(Q:\skin\Cortana\scripts\chat.py,Notifications)</onclick>
+							<label>Cortana Quick Asks</label>
+							<onclick>RunScript(Q:\scripts\script.taterchat\default.py,QuickAsks)</onclick>
 							<onclick>Dialog.Close(shutdownmenu)</onclick>
 						</item>
 						<item>
