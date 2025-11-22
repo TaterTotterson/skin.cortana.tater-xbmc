@@ -1,5 +1,5 @@
 # cortanaOS - A modern, sleek, social "Xbox 180" style dashboard for XBMC4Xbox.
-## Requires [Cortana Server Browser](https://github.com/faithvoid/script.cortanaserverbrowser), [Cortana Chat](https://github.com/faithvoid/script.cortanachatv2), [Cortana Wireless (optional)](https://github.com/faithvoid/script.cortanawireless) & [xSky](https://github.com/faithvoid/plugin.programs.xSky) to function correctly!
+## Requires [Cortana Server Browser](https://github.com/faithvoid/script.cortanaserverbrowser), 
 
 <img width="960" height="720" alt="IMG_0123" src="https://github.com/user-attachments/assets/f37cfde0-7b83-43fd-8a5c-351dc30507e7" />
 
