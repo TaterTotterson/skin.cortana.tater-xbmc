@@ -3,7 +3,7 @@ import xbmcgui
 import os
 import re
 
-GAMES_FILE = xbmc.translatePath('Q://games.txt')
+GAMES_FILE = xbmc.translatePath('special://home/games.txt')
 
 def load_games():
     games = []
@@ -45,7 +45,10 @@ def edit_game_path(games, index):
 
 def remove_game(games, index):
     game_name = games[index][0]
-    confirm = xbmcgui.Dialog().yesno("Confirm", "Are you sure you want to remove '{}' from the list?".format(game_name))
+    confirm = xbmcgui.Dialog().yesno(
+        "Confirm",
+        "Are you sure you want to remove '{}' from the list?".format(game_name)
+    )
     if confirm:
         del games[index]
         save_games(games)
@@ -67,6 +70,7 @@ def edit_games():
     if not games:
         xbmcgui.Dialog().ok("Error", "No games found in games.txt!")
         return
+
     dialog = xbmcgui.Dialog()
     game_list = ["{} - {}".format(name, path) for name, path in games]
     selected = dialog.select("Select Game to Edit", game_list)
@@ -88,7 +92,11 @@ def install_game():
     if not xbe_path:
         xbmcgui.Dialog().ok("Error", "No default.xbe selected!")
         return
-    game_name = get_game_name(os.path.basename(os.path.dirname(xbe_path)))
+
+    # Use folder name as default game name
+    folder_name = os.path.basename(os.path.dirname(xbe_path))
+    game_name = get_game_name(folder_name)
+
     if game_name:
         games = load_games()
         games.append((game_name, xbe_path))
@@ -96,27 +104,49 @@ def install_game():
         xbmcgui.Dialog().ok("Success", "Game installed successfully!")
 
 def install_game_bulk():
-    root_dir = xbmcgui.Dialog().browse(0, "Select Game Directory", 'files')
+    """
+    Let user pick ONE root directory.
+    Recursively find all 'default.xbe' files under it,
+    infer names from folder, and add them to games.txt.
+    """
+    dialog = xbmcgui.Dialog()
+    root_dir = dialog.browse(0, "Select Game Directory", 'files')
     if not root_dir:
         xbmcgui.Dialog().ok("Error", "No directory selected!")
         return
+
+    # Load existing games once
+    games = load_games()
+    existing_paths = set(path for _, path in games)
+
     games_installed = []
     game_entries = []
+
     for subdir, _, files in os.walk(root_dir):
         if "default.xbe" in files:
             xbe_path = os.path.join(subdir, "default.xbe")
+            # Skip if already present
+            if xbe_path in existing_paths:
+                continue
+
             folder_name = os.path.basename(subdir)
+            # Strip things like " (GLO)" or regions in parentheses
             game_name = re.sub(r'\s*\(.*?\)', '', folder_name).strip()
             if game_name:
                 game_entries.append((game_name, xbe_path))
                 games_installed.append(game_name)
+                existing_paths.add(xbe_path)
+
     if game_entries:
-        game_entries.sort(key=lambda x: x[0])
-        for game_name, xbe_path in game_entries:
-            games = load_games()
-            games.append((game_name, xbe_path))
-            save_games(games)
-        xbmcgui.Dialog().ok("Games Installed", "The following games were installed:\n" + "\n".join(sorted(games_installed)))
+        # Sort once, extend, then save once
+        game_entries.sort(key=lambda x: x[0].lower())
+        games.extend(game_entries)
+        save_games(games)
+
+        xbmcgui.Dialog().ok(
+            "Games Installed",
+            "The following games were installed:\n" + "\n".join(sorted(games_installed))
+        )
     else:
         xbmcgui.Dialog().ok("No Games Found", "No valid games were found in the selected directory.")
 
