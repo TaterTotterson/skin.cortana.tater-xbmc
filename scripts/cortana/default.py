@@ -298,12 +298,38 @@ def display_cortana_quick_asks():
         _show_popup(dialog, "Cortana Chat", reply)
 
 
+def display_cortana_news():
+    """
+    One-shot OG Xbox news:
+    - No greeting
+    - Sends a fixed prompt that tells Tater to use the web_search tool
+    - Shows a single popup with the reply, then exits
+    """
+    dialog = xbmcgui.Dialog()
+    news_prompt = (
+        "What's the latest OG Xbox news? "
+        "Use the web_search tool to look it up first, then summarize the most important updates."
+    )
+
+    reply = call_cortana(news_prompt)
+
+    # Reuse the same wrapped popup logic
+    _show_popup(dialog, "OG Xbox News", reply)
+
+
 if __name__ == "__main__":
     try:
-        # If called with an argument "QuickAsks" from the skin button:
-        #   <onclick>RunScript(Q:\scripts\script.taterchat\default.py,QuickAsks)</onclick>
-        if len(sys.argv) > 1 and str(sys.argv[1]).lower() == "quickasks":
-            display_cortana_quick_asks()
+        # Called from the skin like:
+        #   <onclick>RunScript(Q:\skin\Cortana\scripts\cortana\default.py,QuickAsks)</onclick>
+        #   <onclick>RunScript(Q:\skin\Cortana\scripts\cortana\default.py,News)</onclick>
+        if len(sys.argv) > 1:
+            arg = str(sys.argv[1]).lower()
+            if arg == "quickasks":
+                display_cortana_quick_asks()
+            elif arg == "news":
+                display_cortana_news()
+            else:
+                display_cortana_chat()
         else:
             display_cortana_chat()
     except Exception as e:
