@@ -1,4 +1,4 @@
-# cortanaOS - A modern, sleek, social "Xbox 180" style dashboard for XBMC4Xbox.
+# cortanaOS - A modern, sleek, social "Xbox 180" style dashboard for XBMC4Xbox. With Cortana AI Capabilities
 ## Requires [Cortana Server Browser](https://github.com/faithvoid/script.cortanaserverbrowser), 
 
 ## Cortana AI Screenshots:
@@ -10,8 +10,6 @@
 <img width="1280" height="720" alt="screenshot005" src="https://github.com/user-attachments/assets/b46f6c3d-b3d7-43dd-a69c-fff9f8883aa4" />
 <img width="1280" height="720" alt="screenshot006" src="https://github.com/user-attachments/assets/ccd9a4ce-1a02-4c80-957e-d110ac51d1fc" />
 <img width="1280" height="720" alt="screenshot007" src="https://github.com/user-attachments/assets/032e076d-d4ac-4e7c-b10f-eb9ceeebfec7" />
-
-
 
 ## Menu Screenshots:
 ![cortanaOS1](screenshots/1.png)
@@ -27,16 +25,10 @@
 ![Cortana Server Browser - 2](screenshots/csb2.png)
 ![Cortana Server Browser - 3](screenshots/csb3.png)
 
-## Cortana Chat
-![Cortana Chat - 1](screenshots/cc1.png)
-![Cortana Chat - 2](screenshots/cc2.png)
-![Cortana Chat - 3](screenshots/cc3.png)
-![Cortana Chat - 4](screenshots/cc4.png)
-
 ## Features:
 - Replaced the broken Weather page with **Cortana**, a series of scripts that allows you to view & join active Insignia/XLink Kai sessions, events, view server statistics, get new match notifications, get Cortana/Insignia/XLink Kai news, check your Insignia DNS settings, send/receive messages, and more!
 
-- Get social on your Xbox again! Using **Cortana Chat**, you can use the AT protocol (aka Bluesky) to chat with fellow gamers, invite them to games, set beacons to find other players, and more, as well as quick access to Xbox Video Chat for voice/video chat over Insignia!
+- Bring your Xbox into the future with Cortana AI — chat naturally on your OG Xbox, ask questions, get recommendations, and control your smart home directly from your console.
 
 - Show off your gamerscore and reputation with **Cortana ID**, a reimplementation of gamertags from MC360! Set it manually, or pull it from your Xbox Live profile manually (or automatically on startup)!
 
@@ -80,21 +72,6 @@
 - Change your skin to Cortana in the XBMC Appearance menu.
 - ???
 - Profit!
-
-## TODO (High Priority)
-- Fix up & release Cortana Server Browser & Cortana Chat.
-- Reincorporate gamertag and media buttons from MC360 into guide menu somehow.
-
-## TODO (Low-Med Priority):
-- Further work on "Cortana Marketplace" (need to find a futureproof source for Xbox homebrew and possibly convert it from a script into an add-on for image previews)
-- Fix multi-user savegame script.
-- Work on "Aero Lite" theme (a light pastel version of the default theme)
-
-## Bugs:
-- Cortana blade is currently a bit visually glitchy and visibly says "Refresh" when switching pages. It's a "blink and you'll mix it" issue but it's still present.
-- Signing in to Cortana Chat can currently hang the system when launching a game right as the script refreshes. Looking into a fix for this ASAP before release.
-- You tell me.
-- Certain multi-tasking actions can crash 64MB Xbox systems if video/visualization transparency behind menus is enabled, such as going to the menu and launching a script via the guide menu. This shouldn't be an issue for 128mb systems, but YMMV. You can toggle this option under "cortanaOS -> Skin Settings" to find what works for you.
 
 ## Credits:
 - Steve Matteson - Open Sans font
