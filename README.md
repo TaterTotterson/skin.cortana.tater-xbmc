@@ -2,13 +2,15 @@
 ## Requires [Cortana Server Browser](https://github.com/faithvoid/script.cortanaserverbrowser), 
 
 ## Cortana AI Screenshots:
-[screenshot000.bmp](https://github.com/user-attachments/files/23696045/screenshot000.bmp)
-[screenshot001.bmp](https://github.com/user-attachments/files/23696044/screenshot001.bmp)
-[screenshot002.bmp](https://github.com/user-attachments/files/23696043/screenshot002.bmp)
-[screenshot003.bmp](https://github.com/user-attachments/files/23696042/screenshot003.bmp)
-[screenshot004.bmp](https://github.com/user-attachments/files/23696041/screenshot004.bmp)
-[screenshot005.bmp](https://github.com/user-attachments/files/23696040/screenshot005.bmp)
-[screenshot006.bmp](https://github.com/user-attachments/files/23696039/screenshot006.bmp)
+<img width="1280" height="720" alt="screenshot000" src="https://github.com/user-attachments/assets/cdbd189f-23f2-4ab0-a64a-ecb486f2ba82" />
+<img width="1280" height="720" alt="screenshot001" src="https://github.com/user-attachments/assets/c2a08da0-837c-4821-ae06-05a8afe1c46f" />
+<img width="1280" height="720" alt="screenshot002" src="https://github.com/user-attachments/assets/6804138f-4a4c-451d-98d6-8b1fd7445966" />
+<img width="1280" height="720" alt="screenshot003" src="https://github.com/user-attachments/assets/9b9cccee-f294-417c-b2b6-589ab3f7769a" />
+<img width="1280" height="720" alt="screenshot004" src="https://github.com/user-attachments/assets/18e4bead-bce0-4f53-ac7c-a1c9a07fe8ae" />
+<img width="1280" height="720" alt="screenshot005" src="https://github.com/user-attachments/assets/b46f6c3d-b3d7-43dd-a69c-fff9f8883aa4" />
+<img width="1280" height="720" alt="screenshot006" src="https://github.com/user-attachments/assets/ccd9a4ce-1a02-4c80-957e-d110ac51d1fc" />
+<img width="1280" height="720" alt="screenshot007" src="https://github.com/user-attachments/assets/032e076d-d4ac-4e7c-b10f-eb9ceeebfec7" />
+
 
 
 ## Menu Screenshots:
